@@ -6,6 +6,7 @@ export function FaqsContainer() {
     return (
         <Accordian>
             <Accordian.Title>Frequently Asked Questions</Accordian.Title>
+            <Accordian.Frame>
             {faqsData.map((item) => (
                 <Accordian.Item key={item.id}>
                     <Accordian.Header>{item.header}</Accordian.Header>
@@ -13,6 +14,7 @@ export function FaqsContainer() {
                 </Accordian.Item>
 
             ))}
+            </Accordian.Frame>
         </Accordian>
     )
 }
