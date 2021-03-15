@@ -14,7 +14,7 @@ const config = {
   appId: "1:714230962799:web:415ed87977a1c67c4f0b9a",
 };
 
-//const firebase = window.firebase.initializeApp(config);
+const firebase = window.firebase.initializeApp(config);
 
 ReactDOM.render(
   <>
