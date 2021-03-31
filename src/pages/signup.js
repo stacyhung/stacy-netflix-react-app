@@ -29,16 +29,17 @@ export default function Signup() {
         result.user
           .updateProfile({
             displayName: firstName,
-            photoURL: Math.floor(Math.random() * 5) + 1,
+            photoURL: Math.floor(Math.random() * 12) + 1,
           })
           .then(() => {
-            setEmailAddress("");
-            setPassword("");
-            setError("");
             history.push(ROUTES.BROWSE);
           })
       )
-      .catch((error) => setError(error.message));
+      .catch((error) => {
+        setEmailAddress("");
+        setPassword("");
+        setError(error.message);
+      });
   };
 
   return (

@@ -27,9 +27,13 @@ function App() {
         <ProtectedRoute user={user} path={ROUTES.BROWSE}>
           <Browse />
         </ProtectedRoute>
-        <Route path={ROUTES.HOME}>
+        <IsUserRedirect
+          user={user}
+          loggedInPath={ROUTES.BROWSE}
+          path={ROUTES.HOME}
+        >
           <Home />
-        </Route>
+        </IsUserRedirect>
       </Switch>
     </Router>
   );
